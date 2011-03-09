@@ -151,6 +151,10 @@
 //	Show the specified list. Private lists will only be shown if the authenticated user owns the specified list.
 - (NSString *)getListForUser:(NSString *)username withID:(MGTwitterEngineID)listID;
 
+//  get list statuses
+- (NSString *)getListStatusesForUser:(NSString *)username withListName:(NSString *)listName;
+
+
 // Direct Message methods
 
 - (NSString *)getDirectMessagesSinceID:(MGTwitterEngineID)sinceID startingAtPage:(int)pageNum; // direct_messages

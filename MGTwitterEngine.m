@@ -1627,6 +1627,23 @@
                            responseType:MGTwitterUserLists];
 }
 
+
+- (NSString *)getListStatusesForUser:(NSString *)username withListName:(NSString *)listName {
+	if (!username || !listName) {
+		NSLog(@"returning nil");
+		return nil;
+	}
+  
+	
+	NSString *path = [NSString stringWithFormat:@"%@/lists/%@/statuses.%@", username, listName, API_FORMAT];
+  
+  return [self _sendRequestWithMethod:nil path:path 
+                      queryParameters:nil body:nil
+                          requestType:MGTwitterUserListStatuses
+                         responseType:MGTwitterStatuses];
+  
+}
+
 #pragma mark Friendship methods
 
 
