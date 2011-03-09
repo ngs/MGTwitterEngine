@@ -154,6 +154,12 @@
 //  get list statuses
 - (NSString *)getListStatusesForUser:(NSString *)username withListName:(NSString *)listName;
 
+- (NSString *)getListStatusesForUser:(NSString *)username
+                        withListName:(NSString *)listName
+                             sinceID:(MGTwitterEngineID)sinceID
+                           maximumID:(MGTwitterEngineID)maxID
+                      startingAtPage:(int)page count:(int)count;
+
 
 // Direct Message methods
 
